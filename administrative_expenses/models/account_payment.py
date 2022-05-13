@@ -13,7 +13,7 @@ class AccountPayment(models.Model):
                 if record.invoice_payments_widget:
                     date_str = record.invoice_payments_widget.split()[23].replace('"',"")
                     date_str = date_str.replace(',','')
-                    date_dt = datetime.strptime(date_str, '%Y-%m-%d')
+                    date_dt = datetime.strptime(date_str, '%d-%m-%m')
                     date_date = date_dt.date()
                     record.register_date = date_date
         return rec
